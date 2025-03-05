@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+header .carrito a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header .carrito a:hover {
+    color: #ff6347;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.processor-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.processor-image {
+    max-width: 215px;
+    margin-right: 40px;
+}
+
+.processor-specs {
+    max-width: 400px;
+}
+
+.processor-specs h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.processor-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.processor-specs ul li {
+    margin-bottom: 10px;
+}
+
+.processor-specs ul li strong {
+    color: #555;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}	
+/* other products */
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 120px;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.producto button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #e5533d;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+}
+
+footer .info-contacto h3,
+footer .redes-sociales h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-left: 1.25rem;
+}
+
+footer .info-contacto p {
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+
+footer .redes-sociales ul {
+    list-style: none;
+}
+
+footer .redes-sociales ul li {
+    margin-bottom: 0.5rem;
+    margin-right: 4rem;
+}
+
+footer .redes-sociales ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .redes-sociales ul li a:hover {
+    color: #ff6347;
+}
+
+footer .derechos {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info-contacto,
+    footer .redes-sociales {
+        margin-bottom: 1rem;
+    }
+}

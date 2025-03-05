@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesadores</title>
+    <link rel="stylesheet" href="/styles/styleProcessors.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tienda de Componentes de PC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <a href="#carrito">Carrito 🛒</a>
+        </div>
+    </header>
+
+    <div class="processor-details" id="detalles-producto">
+        <img src="" alt="Processor Image" class="processor-image" id="processor-img">
+        <div class="processor-specs" id="processor-specs">
+          <h2></h2>
+          <ul>
+            <li><strong>Arquitectura:</strong> <span id="arquitectura"></span></li>
+            <li><strong>Núcleos:</strong> <span id="nucleos"></span></li>
+            <li><strong>Hilos:</strong> <span id="hilos"></span></li>
+            <li><strong>Frecuencia:</strong> <span id="frecuencia"></span></li>
+            <li><strong>Frecuencia Turbo:</strong> <span id="frecuenciaTurbo"></span></li>
+            <li><strong>Socket:</strong> <span id="socket"></span></li>
+            <li><strong>TDP:</strong> <span id="tdp"></span></li>
+            <li><strong>TDP Máximo:</strong> <span id="tdpMaximo"></span></li>
+            <li><strong>Nanómetros:</strong> <span id="nanometros"></span></li>
+            <li><strong>Precio:</strong> <span id="precio"></span></li>
+          </ul>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+      </div>
+
+    <section id="productos">
+        <h2>Otros productos que te podrian interesar</h2>
+        <div class="productos-grid">
+            <article class="producto">
+            <a href="/sections/processors.html?id=i5-10400f" id="i5-10400F">
+                <img src="/img/i5-10400F.jpg" alt="Procesador Intel Core i5 10400F">
+                <h3>Procesador Intel Core i5 10400F</h3>
+                <p>$170</p>
+                <button>Añadir al carrito</button>
+            </a>
+            </article>
+
+            <article class="producto">
+                <a href="/sections/graphics.html?id=rtx-3080" id="rtx-3080">
+                    <img src="/img/rtx-3080.webp" alt="EVGA GeForce RTX 3080 ULTRA GAMING">
+                    <h3>EVGA GeForce RTX 3080 ULTRA GAMING 10 GB GDDR6X</h3>
+                    <p>$899.99</p>
+                </a>
+                <button>Añadir al carrito</button>
+            </article>
+        </div>
+    <footer id="contacto">
+        <div class="info-contacto">
+            <h3>Contacto</h3>
+            <p>Email: info@tiendacomponentespc.com</p>
+            <p>Teléfono: +123 456 789</p>
+        </div>
+        <div class="redes-sociales">
+            <h3>Síguenos</h3>
+            <ul>
+                <li><a href="#facebook">Facebook</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="derechos">
+            <p>&copy; 2023 Tienda de Componentes de PC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="/scripts/processors.js"></script>
+</body>
+</html>

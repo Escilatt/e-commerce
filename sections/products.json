@@ -1,0 +1,102 @@
+{
+    "procesadores": [
+      {
+        "id": "i7-12700KF",
+        "nombre": "Intel Core i7-12700KF",
+        "imagen": "/img/i7-12700KF.jpg",
+        "arquitectura": "Alder Lake",
+        "nucleos": "12 Núcleos / 8 P-cores / 4 E-cores",
+        "hilos": 20,
+        "frecuencia": "3.6 GHz",
+        "frecuenciaTurbo": "5.0 GHz",
+        "socket": "LGA 1700",
+        "tdp": "125 W",
+        "tdpMaximo": "190 W",
+        "nanometros": "10 nm",
+        "precio": 299
+      },
+      {
+        "id": "i5-10400F",
+        "nombre": "Intel Core i5-10400F",
+        "imagen": "/img/i5-10400F.jpg",
+        "arquitectura": "Comet Lake",
+        "nucleos": "6 Núcleos",
+        "hilos": 12,
+        "frecuencia": "2.9 GHz",
+        "frecuenciaTurbo": "4.3 GHz",
+        "socket": "LGA 1200",
+        "tdp": "65 W",
+        "tdpMaximo": "N/A",
+        "nanometros": "14 nm",
+        "precio": 170
+      },
+      {
+        "id": "ryzen-5-5600",
+        "nombre": "AMD Ryzen 5 5600",
+        "imagen": "/img/ryzen-5-5600.jpg",
+        "arquitectura": "Zen 3",
+        "nucleos": "6 Núcleos",
+        "hilos": 12,
+        "frecuencia": "3.5 GHz",
+        "frecuenciaTurbo": "4.4 GHz",
+        "socket": "AM4",
+        "tdp": "65 W",
+        "tdpMaximo": "N/A",
+        "nanometros": "7 nm",
+        "precio": 109.99
+      }
+    ],
+    "tarjetasGraficas":[
+      {
+        "id": "rtx-3080",
+        "nombre": "EVGA GeForce RTX 3080 ULTRA GAMING",
+        "imagen": "/img/rtx-3080.webp",
+        "arquitectura": "Ampere",
+        "bus": "PCI Express 4.0 x16",
+        "frecuencia": "1.4 GHz",
+        "frecuenciaTurbo": "1.71 GHz OC",
+        "frecuenciaMemorias": "1.19 GHz OC",
+        "memoria": "10 GB GDDR6X",
+        "tdp": "320 W",
+        "puertos": "1x HDMI 2.1, 3x DisplayPort 1.4a",
+        "precio": 899
+      },
+      {
+        "id": "rx-6600-xt",
+        "nombre": "AMD RX 6600 XT",
+        "imagen": "/img/rx-6600-xt.jpg",
+        "arquitectura": "RDNA 2",
+        "nucleos": "2048",
+        "frecuencia": "2.4 GHz",
+        "frecuenciaTurbo": "2.6 GHz",
+        "memoria": "8 GB GDDR6",
+        "tdp": "160 W",
+        "precio": 379
+      },
+      {
+        "id": "gtx-1660-super",
+        "nombre": "Nvidia GTX 1660 Super",
+        "imagen": "/img/gtx-1660-super.jpg",
+        "arquitectura": "Turing",
+        "nucleos": "1408",
+        "frecuencia": "1.53 GHz",
+        "frecuenciaTurbo": "1.785 GHz",
+        "memoria": "6 GB GDDR6",
+        "tdp": "125 W",
+        "precio": 229
+      }
+    ],
+    "memoriasRam": [
+    {
+      "id": "corsair-vengeance-3200-16",
+      "nombre": "Corsair Vengeance LPX 16GB DDR4",
+      "imagen": "/img/corsair-vengeance-3200mhz.png",
+      "tipo": "DDR4",
+      "capacidad": "16GB (2x8GB)",
+      "frecuencia": "3200MHz",
+      "latencia": "CL16",
+      "voltaje": "1.35V",
+      "precio": 39.99
+    }
+  ]
+  }
