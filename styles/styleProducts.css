@@ -1,0 +1,140 @@
+.productos-grid.container .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px; /* Espacio entre productos */
+    padding: 20px 0; /* Espaciado vertical */
+}
+
+/* Estilos para cada producto */
+.productos-grid.container .producto {
+    border: 1px solid #ccc; /* Borde para cada producto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar contenido */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para los productos */
+.productos-grid.container .producto:hover {
+    transform: translateY(-5px); /* Levantar ligeramente el producto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para las imágenes de los productos */
+.productos-grid.container .producto img {
+    max-width: 100%; /* Asegurar que la imagen no se desborde */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-bottom: 1px solid #eee; /* Línea debajo de la imagen */
+    padding-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+/* Estilos para el texto de los productos */
+.productos-grid.container .producto h3 {
+    margin: 10px 0; /* Espaciado para el título */
+    font-size: 1.1em; /* Tamaño del título */
+    color: #333; /* Color del texto */
+}
+
+.productos-grid.container .producto p {
+    margin: 5px 0; /* Espaciado para el precio */
+    font-size: 1em; /* Tamaño del precio */
+    color: #555; /* Color del precio */
+}
+
+/* Estilos para el botón de añadir al carrito */
+.productos-grid.container .producto button {
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    font-size: 0.9em; /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.productos-grid.container .producto button:hover {
+    background-color: #0056b3; /* Cambiar color al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .productos-grid.container .productos-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .productos-grid.container .productos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid.container .productos-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+.filter {
+    display: contents;
+    gap: 1rem; /* Espacio entre los elementos */
+    align-items: center;
+    margin-bottom: 3rem; /* Espacio debajo del filtro */
+}
+
+/* Estilos para el select */
+.filter .filter-products {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter .filter-products:hover {
+    border-color: #ff6347; /* Color al pasar el mouse */
+}
+
+.filter .filter-products:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos para el input de búsqueda */
+.filter .search {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.filter .search:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos para el botón de búsqueda */
+.filter .search-button {
+    padding: 0.5rem 1.5rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.productos-grid.container .producto img {
+    max-width: 170px;
+    height: auto;
+}
+

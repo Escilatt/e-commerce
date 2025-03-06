@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}*
 
 body {
     font-family: 'Arial', sans-serif;
@@ -75,7 +75,7 @@ section {
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 1.50rem;
     margin-bottom: 1rem;
     color: #333;
 }
@@ -89,6 +89,7 @@ section h2 {
 
 .producto {
     background-color: #fff;
+    max-width: 700px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
@@ -102,7 +103,6 @@ section h2 {
 }
 
 .producto img {
-    max-width: 160px;
     border-radius: 8px;
 }
 
@@ -188,6 +188,21 @@ section h2 {
     background-color: #e5533d;
 }
 
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
 /* Pie de página */
 footer {
     background-color: #333;
@@ -196,6 +211,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 footer .info-contacto h3,
@@ -263,3 +279,125 @@ footer .derechos {
         margin-bottom: 1rem;
     }
 }
+
+/* Graphics design */
+
+.graphics-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.graphics-image {
+    max-width: 215px;
+    margin-right: 40px;
+}
+
+.graphics-specs {
+    max-width: 400px;
+}
+
+.graphics-specs h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.graphics-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.graphics-specs ul li {
+    margin-bottom: 10px;
+}
+
+.graphics-specs ul li strong {
+    color: #555;
+}
+
+/* Processors desing */
+
+.processor-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.processor-image {
+    max-width: 215px;
+    margin-right: 40px;
+}
+
+.processor-specs {
+    max-width: 400px;
+}
+
+.processor-specs h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.processor-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.processor-specs ul li {
+    margin-bottom: 10px;
+}
+
+.processor-specs ul li strong {
+    color: #555;
+}
+
+/* Ram desing */
+
+.ram-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ram-image {
+    max-width: 215px;
+    margin-right: 40px;
+}
+
+.ram-specs {
+    max-width: 400px;
+}
+
+.ram-specs h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.ram-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ram-specs ul li {
+    margin-bottom: 10px;
+}
+
+.ram-specs ul li strong {
+    color: #555;
+}
+
+/* products.html */
