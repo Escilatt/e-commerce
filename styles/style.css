@@ -104,7 +104,7 @@ section h2 {
 
 .producto img {
     border-radius: 8px;
-    max-width: 160px;
+    max-width: 120px;
 }
 
 .producto h3 {
@@ -267,7 +267,7 @@ footer .derechos {
 
     .productos-grid,
     .ofertas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 
     footer {
@@ -278,6 +278,29 @@ footer .derechos {
     footer .info-contacto,
     footer .redes-sociales {
         margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome {
+      padding: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .producto {
+      padding: 1rem;
+    }
+  
+    .producto h3 {
+      font-size: 1rem;
+    }
+  
+    .logo {
+      font-size: 1rem;
+      max-width: 70%;
     }
 }
 
