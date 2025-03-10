@@ -1,11 +1,8 @@
-/* styles.css */
-
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}*
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -75,7 +72,7 @@ section {
 }
 
 section h2 {
-    font-size: 1.50rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
     color: #333;
 }
@@ -83,13 +80,12 @@ section h2 {
 /* Productos */
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
 .producto {
     background-color: #fff;
-    max-width: 700px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
@@ -104,7 +100,8 @@ section h2 {
 
 .producto img {
     border-radius: 8px;
-    max-width: 120px;
+    max-width: 130px;
+    height: auto;
 }
 
 .producto h3 {
@@ -136,7 +133,7 @@ section h2 {
 /* Ofertas */
 .ofertas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
@@ -155,7 +152,8 @@ section h2 {
 }
 
 .oferta img {
-    max-width: 160px;
+    max-width: 130px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -250,6 +248,18 @@ footer .derechos {
     font-size: 0.9rem;
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -267,7 +277,7 @@ footer .derechos {
 
     .productos-grid,
     .ofertas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     footer {
@@ -282,25 +292,27 @@ footer .derechos {
 }
 
 @media (max-width: 480px) {
-    .welcome {
-      padding: 1rem;
+    header .logo h1 {
+        font-size: 1.2rem;
     }
-  
-    h2 {
-      font-size: 1.5rem;
+
+    header nav ul li a {
+        font-size: 0.9rem;
     }
-  
-    .producto {
-      padding: 1rem;
+
+    .producto h3,
+    .oferta h3 {
+        font-size: 1rem;
     }
-  
-    .producto h3 {
-      font-size: 1rem;
+
+    .producto p,
+    .oferta p {
+        font-size: 0.9rem;
     }
-  
-    .logo {
-      font-size: 1rem;
-      max-width: 70%;
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
 
@@ -313,12 +325,12 @@ footer .derechos {
     padding: 20px;
     background-color: #fff;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .graphics-image {
-    max-width: 215px;
+    max-width: 200px;
     margin-right: 40px;
 }
 
@@ -353,12 +365,12 @@ footer .derechos {
     padding: 20px;
     background-color: #fff;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 550px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .processor-image {
-    max-width: 215px;
+    max-width: 200px;
     margin-right: 40px;
 }
 
@@ -393,12 +405,12 @@ footer .derechos {
     padding: 20px;
     background-color: #fff;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 550px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .ram-image {
-    max-width: 215px;
+    max-width: 200px;
     margin-right: 40px;
 }
 
@@ -423,5 +435,3 @@ footer .derechos {
 .ram-specs ul li strong {
     color: #555;
 }
-
-/* products.html */
