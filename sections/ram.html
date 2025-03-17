@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Tienda de Componentes de PC</h1>
+            <h1>Geek-PC</h1>
         </div>
         <nav>
             <ul>
@@ -19,7 +19,7 @@
             </ul>
         </nav>
         <div class="carrito">
-            <a href="#carrito">Carrito 🛒</a>
+            <a href="../sections/car.html">Carrito 🛒</a>
         </div>
     </header>
     <main> 
@@ -47,7 +47,7 @@
                 <img src="../img/i5-10400F.jpg" alt="Procesador Intel Core i5 10400F">
                 <h3>Procesador Intel Core i5 10400F</h3>
                 <p>$170</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </a>
             </article>
 
@@ -57,11 +57,16 @@
                     <h3>EVGA GeForce RTX 3080 ULTRA GAMING 10 GB GDDR6X</h3>
                     <p>$899.99</p>
                 </a>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </article>
         </div>
     </section>
     </main>
+
+    <div id="notificacion" class="notificacion">
+        Producto agregado al carrito
+    </div>
+    
     <footer id="contacto">
         <div class="info-contacto">
             <h3>Contacto</h3>
@@ -81,5 +86,6 @@
         </div>
     </footer>
     <script src="../scripts/ram.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

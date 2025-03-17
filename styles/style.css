@@ -1,3 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal (main) debe crecer para ocupar el espacio disponible */
+main {
+    flex: 1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -211,6 +223,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    display: 0;
 }
 
 footer .info-contacto h3,
@@ -246,138 +259,6 @@ footer .derechos {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
-}
-
-/* Media Queries para Responsividad */
-@media (max-width: 1200px) {
-    header {
-        padding: 0 1rem;
-    }
-
-    .productos-grid,
-    .ofertas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer .info-contacto,
-    footer .redes-sociales {
-        margin-bottom: 1rem;
-    }
-    .processor-details,
-    .graphics-details,
-    .ram-details {
-        max-height: 1000px;
-        font-size: 22px;
-    }
-
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
-    header nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .productos-grid,
-    .ofertas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer .info-contacto,
-    footer .redes-sociales {
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    header nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    .producto h3,
-    .oferta h3 {
-        font-size: 1rem;
-    }
-
-    .producto p,
-    .oferta p {
-        font-size: 0.9rem;
-    }
-
-    .productos-grid,
-    .ofertas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .graphics-details,
-    .processor-details,
-    .ram-details {
-        max-height: 800px;
-        font-size: 14px;
-    }
-}
-    @media (max-width: 360px) {
-        header .logo h1 {
-            font-size: 1.2rem;
-        }
-    
-        header nav ul li a {
-            font-size: 0.9rem;
-        }
-    
-        .producto h3,
-        .oferta h3 {
-            font-size: 1rem;
-        }
-        .productos h2 {
-            font-size: 0.50rem;
-        }
-    
-        .producto p,
-        .oferta p {
-            font-size: 0.9rem;
-        }
-    
-        .productos-grid,
-        .ofertas-grid {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        }
-      
-        .graphics-details,
-        .processor-details,
-        .ram-details {
-            display: flex;
-            max-height: 900px;
-            font-size: 12px;
-            margin: 20px auto;
-            padding: 5px;
-        }
-        .add-to-cart {
-            max-width: 20px 50px;
-            padding: 5px 5px;
-        }
 }
 
 /* Graphics design */
@@ -498,4 +379,492 @@ footer .derechos {
 
 .ram-specs ul li strong {
     color: #555;
+}
+
+/* Estilos para la notificación */
+#notificacion {
+    display: none; /* Oculta la notificación por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Animación para mostrar y ocultar la notificación */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Estilos para el carrito */
+
+#carrito {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para el nombre y precio del producto */
+#lista-carrito li .info-producto {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    margin-right: 10px;
+}
+
+#lista-carrito img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos para el input de cantidad */
+#lista-carrito li .cantidad-carrito {
+    width: 60px; /* Ancho fijo */
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0 10px; /* Margen a los lados */
+}
+
+#vaciar-carrito {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#vaciar-carrito:hover {
+    background-color: #c82333;
+}
+
+.eliminar-btn {
+    background-color: #dc3545; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 14px; /* Tamaño de la fuente */
+    display: flex; /* Usar flexbox para alinear ícono y texto */
+    align-items: center; /* Centrar verticalmente */
+    gap: 8px; /* Espacio entre ícono y texto */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.acciones-carrito {
+    display: flex;
+    gap: 1500px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#vaciar-carrito, #pagar-carrito {
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#vaciar-carrito:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
+
+#pagar-carrito {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#pagar-carrito:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Cambiar el color al pasar el mouse */
+.eliminar-btn:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Estilos para el ícono de eliminar */
+.icono-eliminar {
+    font-size: 16px; /* Tamaño del ícono */
+}
+
+#carrito p {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 16px;
+}
+#carrito input {
+    margin-left: 0px;
+    width: 70px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info-contacto,
+    footer .redes-sociales {
+        margin-bottom: 1rem;
+    }
+    .processor-details,
+    .graphics-details,
+    .ram-details {
+        max-height: 1000px;
+        font-size: 22px;
+    }
+
+    .acciones-carrito {
+        display: flex;
+        gap: 895px; /* Espacio entre los botones */
+        margin-top: 10px; /* Espacio superior */
+    }
+
+    #vaciar-carrito, #pagar-carrito {
+        padding: 14px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 6px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        font-size: 12px; /* Tamaño de la fuente */
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+        /* Estilos personalizados para las flechas del input de tipo number */
+        .cantidad-input::-webkit-inner-spin-button,
+        .cantidad-input::-webkit-outer-spin-button,
+        .cantidad-carrito::-webkit-inner-spin-button,
+        .cantidad-carrito::-webkit-outer-spin-button {
+            -webkit-appearance: none; /* Oculta las flechas por defecto */
+            appearance: none;
+            margin: 0; /* Elimina el margen por defecto */
+        }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info-contacto,
+    footer .redes-sociales {
+        margin-bottom: 1rem;
+    }
+
+    
+    .eliminar-btn {
+        max-width: 30px;
+        max-height: 30px;
+        padding: 5px ;
+        margin-left: 16px;
+    }
+
+    .acciones-carrito {
+        display: flex;
+        gap: 460px; /* Espacio entre los botones */
+        margin-top: 10px; /* Espacio superior */
+    }
+
+    #vaciar-carrito, #pagar-carrito {
+        padding: 14px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 6px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        font-size: 12px; /* Tamaño de la fuente */
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+        /* Estilos personalizados para las flechas del input de tipo number */
+        .cantidad-input::-webkit-inner-spin-button,
+        .cantidad-input::-webkit-outer-spin-button,
+        .cantidad-carrito::-webkit-inner-spin-button,
+        .cantidad-carrito::-webkit-outer-spin-button {
+            -webkit-appearance: none; /* Oculta las flechas por defecto */
+            appearance: none;
+            margin: 0; /* Elimina el margen por defecto */
+        }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .producto h3,
+    .oferta h3 {
+        font-size: 1rem;
+    }
+
+    .producto p,
+    .oferta p {
+        font-size: 0.9rem;
+    }
+
+    .productos-grid,
+    .ofertas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .graphics-details,
+    .processor-details,
+    .ram-details {
+        max-height: 800px;
+        font-size: 14px;
+    }
+
+    .carrito li {
+        justify-content: center;
+    }
+    .carrito #text {
+        text-align: center;
+    }
+
+    .eliminar-btn {
+        max-width: 30px;
+        max-height: 30px;
+        padding: 5px ;
+        margin-left: 16px;
+    }
+
+    #carrito li {
+        justify-content: center;
+        text-align: center;
+        font-size: 17px;
+        display: flex;
+    } 
+
+    .acciones-carrito {
+        display: flex;
+        gap: 170px; /* Espacio entre los botones */
+        margin-top: 15px; /* Espacio superior */
+    }
+
+    #vaciar-carrito, #pagar-carrito {
+        padding: 14px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 6px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        font-size: 12px; /* Tamaño de la fuente */
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+
+    /* Estilos personalizados para las flechas del input de tipo number */
+    .cantidad-input::-webkit-inner-spin-button,
+    .cantidad-input::-webkit-outer-spin-button,
+    .cantidad-carrito::-webkit-inner-spin-button,
+    .cantidad-carrito::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Oculta las flechas por defecto */
+        appearance: none;
+        margin: 0; /* Elimina el margen por defecto */
+    }
+}
+    @media (max-width: 360px) {
+        header .logo h1 {
+            font-size: 1.2rem;
+        }
+    
+        header nav ul li a {
+            font-size: 0.9rem;
+        }
+    
+        .producto h3,
+        .oferta h3 {
+            font-size: 1rem;
+        }
+        .productos h2 {
+            font-size: 0.50rem;
+        }
+    
+        .producto p,
+        .oferta p {
+            font-size: 0.9rem;
+        }
+    
+        .productos-grid,
+        .ofertas-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      
+        .graphics-details,
+        .processor-details,
+        .ram-details {
+            display: flex;
+            max-height: 900px;
+            font-size: 12px;
+            margin: 20px auto;
+            padding: 5px;
+        }
+        .add-to-cart {
+            max-width: 20px 50px;
+            padding: 5px 5px;
+        }
+
+        #carrito li {
+            justify-content: center;
+            text-align: center;
+            font-size: 16px;
+            display: flex;
+        } 
+        
+        .eliminar-btn {
+            max-width: 30px;
+            max-height: 30px;
+            padding: 5px ;
+            margin-left: 16px;
+        }
+
+        .acciones-carrito {
+            display: flex;
+            gap: 20px; /* Espacio entre los botones */
+            margin-top: 20px; /* Espacio superior */
+        }
+
+        #vaciar-carrito, #pagar-carrito {
+            padding: 20px; /* Espaciado interno */
+            border: none; /* Sin borde */
+            border-radius: 6px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            font-size: 12px; /* Tamaño de la fuente */
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        /* Estilos personalizados para las flechas del input de tipo number */
+    .cantidad-input::-webkit-inner-spin-button,
+    .cantidad-input::-webkit-outer-spin-button,
+    .cantidad-carrito::-webkit-inner-spin-button,
+    .cantidad-carrito::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Oculta las flechas por defecto */
+        appearance: none;
+        margin: 0; /* Elimina el margen por defecto */
+    }
+
+    }
+
+/* Estilos generales para el input */
+.cantidad-input,
+.cantidad-carrito {
+    width: 60px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo cuando el input está enfocado */
+.cantidad-input:focus,
+.cantidad-carrito:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo cuando el input está deshabilitado */
+.cantidad-input:disabled,
+.cantidad-carrito:disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Estilo para el hover */
+.cantidad-input:hover,
+.cantidad-carrito:hover {
+    border-color: #bbb;
+}
+
+/* Estilo para el input dentro del carrito */
+#lista-carrito .cantidad-carrito {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Estilo para el input en los productos */
+.producto .cantidad-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Contenedor personalizado para las flechas */
+.cantidad-input-container,
+.cantidad-carrito-container {
+    position: relative;
+    display: inline-block;
 }
