@@ -163,3 +163,35 @@ document.getElementById('pagar-carrito')?.addEventListener('click', () => {
         alert('El carrito está vacío. Agrega productos antes de pagar.');
     }
 });
+
+document.getElementById('formulario-registro').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+
+    // Obtener los datos del formulario
+    const datos = {
+        nombre_usuario: document.getElementById('nombre').value,
+        correo: document.getElementById('correo').value,
+        contrasena: document.getElementById('contrasena').value,
+        direccion: document.getElementById('direccion').value,
+        telefono: document.getElementById('telefono').value,
+    };
+
+    try {
+        // Enviar los datos al backend
+        const respuesta = await fetch('http://localhost:3000/registrar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos),
+        });
+
+        // Procesar la respuesta del backend
+        const resultado = await respuesta.json();
+        console.log(resultado); // Mostrar el resultado en la consola
+        alert(resultado); // Mostrar un mensaje al usuario
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Hubo un error al registrar el usuario');
+    }
+});
